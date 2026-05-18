@@ -1,0 +1,98 @@
+<svg width="100%" viewBox="0 0 680 280" role="img" xmlns="http://www.w3.org/2000/svg">
+  <title>Vitor Fernandes — Banner terminal minimalista</title>
+  <desc>Banner estilo terminal com texto digitando e cursor piscando</desc>
+
+  <defs>
+    <style>
+      @keyframes blink { 0%,49%{opacity:1} 50%,100%{opacity:0} }
+
+      @keyframes reveal1 { 0%,4%{opacity:0} 5%,100%{opacity:1} }
+      @keyframes reveal2 { 0%,14%{opacity:0} 15%,100%{opacity:1} }
+      @keyframes reveal3 { 0%,24%{opacity:0} 25%,100%{opacity:1} }
+      @keyframes reveal4 { 0%,34%{opacity:0} 35%,100%{opacity:1} }
+      @keyframes reveal5 { 0%,44%{opacity:0} 45%,100%{opacity:1} }
+      @keyframes reveal6 { 0%,54%{opacity:0} 55%,100%{opacity:1} }
+      @keyframes reveal7 { 0%,64%{opacity:0} 65%,100%{opacity:1} }
+
+      @keyframes fadeBar { 0%,90%{opacity:0} 95%,100%{opacity:.06} }
+
+      .cursor { animation: blink .9s step-end infinite; }
+      .bar { animation: fadeBar 12s infinite; }
+    </style>
+  </defs>
+
+  <!-- Fundo preto puro -->
+  <rect width="680" height="280" fill="#000000"/>
+
+  <!-- Barra de status discreta que aparece no fim -->
+  <rect class="bar" x="0" y="260" width="680" height="20" fill="#1D9E75"/>
+
+  <!-- Linha 1: whoami -->
+  <text style="animation: reveal1 12s infinite steps(1); opacity:0;"
+    x="60" y="72" font-family="'SF Mono','Fira Code','Courier New',monospace"
+    font-size="13" fill="#444">~</text>
+  <text style="animation: reveal1 12s infinite steps(1); opacity:0;"
+    x="76" y="72" font-family="'SF Mono','Fira Code','Courier New',monospace"
+    font-size="13" fill="#1D9E75">❯</text>
+  <text style="animation: reveal1 12s infinite steps(1); opacity:0;"
+    x="94" y="72" font-family="'SF Mono','Fira Code','Courier New',monospace"
+    font-size="13" fill="#E6EDF3" letter-spacing="0.3">whoami</text>
+
+  <!-- Linha 2: resposta whoami -->
+  <text style="animation: reveal2 12s infinite steps(1); opacity:0;"
+    x="60" y="98" font-family="'SF Mono','Fira Code','Courier New',monospace"
+    font-size="13" fill="#8B949E" letter-spacing="0.3">vitor fernandes</text>
+
+  <!-- Linha 3: cat role.txt -->
+  <text style="animation: reveal3 12s infinite steps(1); opacity:0;"
+    x="60" y="128" font-family="'SF Mono','Fira Code','Courier New',monospace"
+    font-size="13" fill="#444">~</text>
+  <text style="animation: reveal3 12s infinite steps(1); opacity:0;"
+    x="76" y="128" font-family="'SF Mono','Fira Code','Courier New',monospace"
+    font-size="13" fill="#1D9E75">❯</text>
+  <text style="animation: reveal3 12s infinite steps(1); opacity:0;"
+    x="94" y="128" font-family="'SF Mono','Fira Code','Courier New',monospace"
+    font-size="13" fill="#E6EDF3" letter-spacing="0.3">cat role.txt</text>
+
+  <!-- Linha 4: resposta role -->
+  <text style="animation: reveal4 12s infinite steps(1); opacity:0;"
+    x="60" y="154" font-family="'SF Mono','Fira Code','Courier New',monospace"
+    font-size="13" fill="#8B949E" letter-spacing="0.3">dev · instrutor · builder</text>
+
+  <!-- Linha 5: echo $stack -->
+  <text style="animation: reveal5 12s infinite steps(1); opacity:0;"
+    x="60" y="184" font-family="'SF Mono','Fira Code','Courier New',monospace"
+    font-size="13" fill="#444">~</text>
+  <text style="animation: reveal5 12s infinite steps(1); opacity:0;"
+    x="76" y="184" font-family="'SF Mono','Fira Code','Courier New',monospace"
+    font-size="13" fill="#1D9E75">❯</text>
+  <text style="animation: reveal5 12s infinite steps(1); opacity:0;"
+    x="94" y="184" font-family="'SF Mono','Fira Code','Courier New',monospace"
+    font-size="13" fill="#E6EDF3" letter-spacing="0.3">echo $stack</text>
+
+  <!-- Linha 6: resposta stack -->
+  <text style="animation: reveal6 12s infinite steps(1); opacity:0;"
+    x="60" y="210" font-family="'SF Mono','Fira Code','Courier New',monospace"
+    font-size="13" fill="#8B949E" letter-spacing="0.3">typescript · react · supabase · cloudflare</text>
+
+  <!-- Linha 7: prompt final com cursor -->
+  <text style="animation: reveal7 12s infinite steps(1); opacity:0;"
+    x="60" y="240" font-family="'SF Mono','Fira Code','Courier New',monospace"
+    font-size="13" fill="#444">~</text>
+  <text style="animation: reveal7 12s infinite steps(1); opacity:0;"
+    x="76" y="240" font-family="'SF Mono','Fira Code','Courier New',monospace"
+    font-size="13" fill="#1D9E75">❯</text>
+
+  <!-- Cursor piscando na linha final -->
+  <rect class="cursor" style="animation: reveal7 12s infinite steps(1), blink .9s step-end infinite; opacity:0;"
+    x="94" y="228" width="8" height="15" fill="#1D9E75"/>
+
+  <!-- Barra de título do terminal -->
+  <rect x="0" y="0" width="680" height="36" fill="#111"/>
+  <circle cx="28" cy="18" r="5.5" fill="#FF5F57"/>
+  <circle cx="48" cy="18" r="5.5" fill="#FEBC2E"/>
+  <circle cx="68" cy="18" r="5.5" fill="#28C840"/>
+  <text x="340" y="23" text-anchor="middle"
+    font-family="'SF Mono','Fira Code','Courier New',monospace"
+    font-size="11" fill="#555" letter-spacing="0.5">bash — 80×24</text>
+</svg>
